@@ -10,7 +10,6 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-
 html{scroll-behavior:smooth}
 
 body{
@@ -41,7 +40,6 @@ border-bottom:1px solid #29251e;
 display:flex;
 align-items:center;
 gap:12px;
-flex-shrink:0;
 }
 
 .brand img{
@@ -54,14 +52,12 @@ display:block;
 .logo{
 font-size:22px;
 font-weight:bold;
-color:#ffffff;
+color:#fff;
 letter-spacing:2px;
 white-space:nowrap;
 }
 
-.logo span{
-color:var(--gold);
-}
+.logo span{color:var(--gold)}
 
 nav a{
 color:#ddd;
@@ -73,15 +69,15 @@ transition:.3s;
 
 nav a:hover{color:var(--gold)}
 
-/* HERO SECTION */
+/* HERO */
 
 .hero{
 min-height:590px;
 display:flex;
-align-items:center;
+align-items:stretch;
 justify-content:space-between;
 gap:40px;
-padding:75px 10%;
+padding:0 0 0 10%;
 background:
 radial-gradient(ellipse at 80% 40%,#292113 0%,#090909 55%);
 overflow:hidden;
@@ -90,8 +86,8 @@ overflow:hidden;
 .hero-content{
 flex:1;
 max-width:650px;
-position:relative;
-z-index:2;
+align-self:center;
+padding:75px 0;
 }
 
 .tag{
@@ -131,34 +127,26 @@ background:#f0d69e;
 transform:translateY(-2px);
 }
 
-/* PORTRAIT - SOFT BLEND */
+/* CINEMATIC PORTRAIT */
 
 .hero-image{
-flex:0 1 360px;
-position:relative;
+flex:0 0 38%;
+align-self:stretch;
+overflow:hidden;
 display:flex;
-align-items:center;
-justify-content:center;
+align-items:stretch;
 }
 
 .hero-image img{
 width:100%;
-max-width:350px;
-height:430px;
+height:100%;
+min-height:590px;
 object-fit:cover;
 object-position:center top;
 display:block;
-border:none;
+border:0;
 border-radius:0;
-box-shadow:0 20px 65px rgba(0,0,0,.28);
--webkit-mask-image:
-linear-gradient(to right,transparent 0%,black 16%),
-linear-gradient(to bottom,black 0%,black 82%,transparent 100%);
--webkit-mask-composite:source-in;
-mask-image:
-linear-gradient(to right,transparent 0%,black 16%),
-linear-gradient(to bottom,black 0%,black 82%,transparent 100%);
-mask-composite:intersect;
+box-shadow:none;
 }
 
 /* SECTIONS */
@@ -234,7 +222,6 @@ text-align:center;
 /* CONTACT */
 
 .contact{text-align:center}
-
 .contact p{color:#aaa}
 
 /* FOOTER */
@@ -247,7 +234,7 @@ color:#888;
 font-size:13px;
 }
 
-/* RESPONSIVE */
+/* MOBILE RESPONSIVE */
 
 @media(max-width:750px){
 
@@ -270,35 +257,45 @@ font-size:12px;
 }
 
 .hero{
-padding:65px 7%;
+padding:0 7%;
 min-height:auto;
 flex-direction:column-reverse;
+gap:0;
 text-align:center;
-gap:25px;
 }
 
-.hero-content{max-width:100%}
+.hero-content{
+max-width:100%;
+padding:45px 0 65px;
+}
+
+.hero-image{
+flex:none;
+width:100%;
+max-width:280px;
+height:350px;
+margin:0 auto;
+}
 
 .hero-image img{
+width:100%;
 height:350px;
-max-width:280px;
+min-height:0;
+object-position:center top;
 }
 
 .hero p{margin:auto}
-
 .tag{letter-spacing:3px}
 
 section{padding:65px 7%}
 
 }
-
 </style>
 </head>
 
 <body>
 
 <nav>
-
 <div class="brand">
 <img src="hb-logo.png" alt="HB Logo">
 <div class="logo">HIMEL BD<span>.</span></div>
@@ -311,13 +308,11 @@ section{padding:65px 7%}
 <a href="#portfolio">Portfolio</a>
 <a href="#contact">Contact</a>
 </div>
-
 </nav>
 
 <header class="hero" id="home">
 
 <div class="hero-content">
-
 <div class="tag">DIGITAL PROFESSIONAL • HIMEL BD</div>
 
 <h1>
@@ -331,7 +326,6 @@ I help businesses build their digital presence through creative design, digital 
 </p>
 
 <a href="#contact" class="btn">Let's Work Together →</a>
-
 </div>
 
 <div class="hero-image">
@@ -341,27 +335,22 @@ I help businesses build their digital presence through creative design, digital 
 </header>
 
 <section class="about" id="about">
-
 <div class="heading">
 <small>GET TO KNOW ME</small>
 <h2>About Me</h2>
 </div>
-
 <p>
 I'm Himel, building my professional journey in the digital world. I focus on creative solutions, continuous improvement and helping businesses strengthen their online presence.
 </p>
-
 </section>
 
 <section id="services">
-
 <div class="heading">
 <small>WHAT I DO</small>
 <h2>My Services</h2>
 </div>
 
 <div class="cards">
-
 <div class="card">
 <h3>Digital Marketing</h3>
 <p>Digital strategies to help businesses grow their online presence.</p>
@@ -381,32 +370,24 @@ I'm Himel, building my professional journey in the digital world. I focus on cre
 <h3>Video Editing</h3>
 <p>Creative video content for brands and social media platforms.</p>
 </div>
-
 </div>
 </section>
 
 <section class="portfolio" id="portfolio">
-
 <div class="heading">
 <small>MY CREATIVE WORK</small>
 <h2>Portfolio</h2>
 </div>
-
 <p>My projects and creative work will be showcased here.</p>
-
 </section>
 
 <section class="contact" id="contact">
-
 <div class="heading">
 <small>LET'S CONNECT</small>
 <h2>Have a Project in Mind?</h2>
 </div>
-
 <p>Let's discuss your ideas and explore how we can work together.</p>
-
 <a href="mailto:YOUR-EMAIL@example.com" class="btn">Contact Me →</a>
-
 </section>
 
 <footer>
