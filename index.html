@@ -203,12 +203,63 @@ color:#aaa;
 font-size:14px;
 }
 
+/* PORTFOLIO SECTION */
+
 .portfolio{
 background:#101010;
 text-align:center;
 }
 
-.portfolio p{color:#aaa}
+.portfolio-intro{
+color:#aaa;
+margin-top:-25px;
+margin-bottom:35px;
+}
+
+.portfolio-grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:28px;
+text-align:left;
+}
+
+.portfolio-card{
+background:#111;
+border:1px solid #302b22;
+border-radius:7px;
+overflow:hidden;
+transition:.3s;
+}
+
+.portfolio-card:hover{
+transform:translateY(-5px);
+border-color:var(--gold);
+}
+
+.portfolio-card video{
+width:100%;
+display:block;
+background:#000;
+aspect-ratio:16/9;
+object-fit:contain;
+}
+
+.portfolio-info{
+padding:18px 20px;
+}
+
+.portfolio-info h3{
+color:var(--gold);
+font-size:18px;
+margin-bottom:5px;
+}
+
+.portfolio-info p{
+color:#aaa;
+font-size:13px;
+}
+
+/* CONTACT SECTION */
 
 .contact{text-align:center}
 .contact p{color:#aaa}
@@ -260,6 +311,11 @@ max-width:280px;
 .hero p{margin:auto}
 
 section{padding:65px 7%}
+
+.portfolio-grid{
+grid-template-columns:1fr;
+gap:22px;
+}
 
 }
 </style>
@@ -376,7 +432,57 @@ I believe in creativity, continuous improvement, and delivering quality work wit
 <h2>Portfolio</h2>
 </div>
 
-<p>My projects and creative work will be showcased here.</p>
+<p class="portfolio-intro">
+A selection of my creative projects and video advertisements.
+</p>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">
+<video controls playsinline preload="metadata">
+<source src="digital-marketing-intro.mp4" type="video/mp4">
+Your browser does not support video playback.
+</video>
+<div class="portfolio-info">
+<h3>Digital Marketing Introduction</h3>
+<p>Personal Brand & Digital Marketing</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<video controls playsinline preload="metadata">
+<source src="mafia-cinematic-trailer.mp4" type="video/mp4">
+Your browser does not support video playback.
+</video>
+<div class="portfolio-info">
+<h3>Mafia Cinematic Trailer</h3>
+<p>Cinematic Video Production</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<video controls playsinline preload="metadata">
+<source src="arabic-coffee-ad.mp4" type="video/mp4">
+Your browser does not support video playback.
+</video>
+<div class="portfolio-info">
+<h3>Arabic Coffee Advertisement</h3>
+<p>AI Product Advertisement</p>
+</div>
+</div>
+
+<div class="portfolio-card">
+<video controls playsinline preload="metadata">
+<source src="sneaker-product-ad.mp4" type="video/mp4">
+Your browser does not support video playback.
+</video>
+<div class="portfolio-info">
+<h3>Sneaker Product Advertisement</h3>
+<p>AI Product Advertisement</p>
+</div>
+</div>
+
+</div>
 
 </section>
 
