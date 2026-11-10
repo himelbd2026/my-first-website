@@ -17,7 +17,6 @@ background:#090909;
 color:#f5f1e9;
 font-family:Arial,sans-serif;
 line-height:1.7;
-overflow-x:hidden;
 }
 
 :root{
@@ -25,14 +24,12 @@ overflow-x:hidden;
 --muted:#aaa49a;
 }
 
-/* NAVIGATION */
-
 nav{
-min-height:80px;
+height:80px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:12px 8%;
+padding:0 8%;
 border-bottom:1px solid #29251e;
 }
 
@@ -46,7 +43,6 @@ gap:12px;
 width:48px;
 height:48px;
 object-fit:contain;
-display:block;
 }
 
 .logo{
@@ -54,40 +50,29 @@ font-size:22px;
 font-weight:bold;
 color:#fff;
 letter-spacing:2px;
-white-space:nowrap;
 }
-
-.logo span{color:var(--gold)}
 
 nav a{
 color:#ddd;
 text-decoration:none;
 margin-left:22px;
 font-size:14px;
-transition:.3s;
 }
 
 nav a:hover{color:var(--gold)}
 
-/* HERO */
-
 .hero{
 min-height:590px;
 display:flex;
-align-items:stretch;
-justify-content:space-between;
+align-items:center;
+padding:75px 10%;
 gap:40px;
-padding:0 0 0 10%;
-background:
-radial-gradient(ellipse at 80% 40%,#292113 0%,#090909 55%);
-overflow:hidden;
+background:radial-gradient(ellipse at 80% 40%,#292113 0%,#090909 55%);
 }
 
 .hero-content{
 flex:1;
-max-width:650px;
-align-self:center;
-padding:75px 0;
+max-width:750px;
 }
 
 .tag{
@@ -97,7 +82,7 @@ font-size:12px;
 }
 
 h1{
-font-size:clamp(38px,5.5vw,70px);
+font-size:clamp(42px,7vw,76px);
 line-height:1.15;
 margin:22px 0;
 }
@@ -110,6 +95,24 @@ max-width:590px;
 font-size:17px;
 }
 
+.hero-image{
+flex:0 1 360px;
+text-align:center;
+}
+
+.hero-image img{
+width:100%;
+max-width:350px;
+height:430px;
+object-fit:cover;
+object-position:center top;
+border:1px solid #8d7447;
+border-radius:5px;
+box-shadow:0 15px 50px #000;
+display:block;
+margin:auto;
+}
+
 .btn{
 display:inline-block;
 margin-top:30px;
@@ -119,37 +122,9 @@ color:#111;
 text-decoration:none;
 font-weight:bold;
 border-radius:3px;
-transition:.3s;
 }
 
-.btn:hover{
-background:#f0d69e;
-transform:translateY(-2px);
-}
-
-/* CINEMATIC PORTRAIT */
-
-.hero-image{
-flex:0 0 38%;
-align-self:stretch;
-overflow:hidden;
-display:flex;
-align-items:stretch;
-}
-
-.hero-image img{
-width:100%;
-height:100%;
-min-height:590px;
-object-fit:cover;
-object-position:center top;
-display:block;
-border:0;
-border-radius:0;
-box-shadow:none;
-}
-
-/* SECTIONS */
+.btn:hover{background:#f0d69e}
 
 section{padding:85px 10%}
 
@@ -178,8 +153,6 @@ max-width:750px;
 margin:auto;
 color:#bbb;
 }
-
-/* SERVICES */
 
 .cards{
 display:grid;
@@ -210,8 +183,6 @@ color:#aaa;
 font-size:14px;
 }
 
-/* PORTFOLIO */
-
 .portfolio{
 background:#101010;
 text-align:center;
@@ -219,12 +190,8 @@ text-align:center;
 
 .portfolio p{color:#aaa}
 
-/* CONTACT */
-
 .contact{text-align:center}
 .contact p{color:#aaa}
-
-/* FOOTER */
 
 footer{
 padding:25px;
@@ -234,14 +201,13 @@ color:#888;
 font-size:13px;
 }
 
-/* MOBILE RESPONSIVE */
-
 @media(max-width:750px){
 
 nav{
 padding:15px 5%;
+height:auto;
 flex-wrap:wrap;
-gap:12px;
+gap:10px;
 }
 
 .brand img{
@@ -257,35 +223,21 @@ font-size:12px;
 }
 
 .hero{
-padding:0 7%;
+padding:65px 7%;
 min-height:auto;
 flex-direction:column-reverse;
-gap:0;
 text-align:center;
+gap:35px;
 }
 
-.hero-content{
-max-width:100%;
-padding:45px 0 65px;
-}
-
-.hero-image{
-flex:none;
-width:100%;
-max-width:280px;
-height:350px;
-margin:0 auto;
-}
+.hero-content{max-width:100%}
 
 .hero-image img{
-width:100%;
 height:350px;
-min-height:0;
-object-position:center top;
+max-width:280px;
 }
 
 .hero p{margin:auto}
-.tag{letter-spacing:3px}
 
 section{padding:65px 7%}
 
@@ -298,7 +250,7 @@ section{padding:65px 7%}
 <nav>
 <div class="brand">
 <img src="hb-logo.png" alt="HB Logo">
-<div class="logo">HIMEL BD<span>.</span></div>
+<div class="logo">HIMEL BD</div>
 </div>
 
 <div>
@@ -339,6 +291,7 @@ I help businesses build their digital presence through creative design, digital 
 <small>GET TO KNOW ME</small>
 <h2>About Me</h2>
 </div>
+
 <p>
 I'm Himel, building my professional journey in the digital world. I focus on creative solutions, continuous improvement and helping businesses strengthen their online presence.
 </p>
@@ -378,6 +331,7 @@ I'm Himel, building my professional journey in the digital world. I focus on cre
 <small>MY CREATIVE WORK</small>
 <h2>Portfolio</h2>
 </div>
+
 <p>My projects and creative work will be showcased here.</p>
 </section>
 
@@ -386,7 +340,9 @@ I'm Himel, building my professional journey in the digital world. I focus on cre
 <small>LET'S CONNECT</small>
 <h2>Have a Project in Mind?</h2>
 </div>
+
 <p>Let's discuss your ideas and explore how we can work together.</p>
+
 <a href="mailto:YOUR-EMAIL@example.com" class="btn">Contact Me →</a>
 </section>
 
