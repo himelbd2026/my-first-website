@@ -311,20 +311,34 @@ font-size:22px;
 .social-list{
 display:flex;
 justify-content:center;
-gap:28px;
+align-items:center;
+gap:12px;
 flex-wrap:wrap;
 }
 
 .social-list a,
 .social-list span{
+display:inline-block;
+padding:7px 17px;
+border:1px solid var(--gold);
+border-radius:50px;
+background:transparent;
 color:#ddd;
 text-decoration:none;
-font-size:14px;
-transition:.3s;
+font-size:13px;
+transition:background .3s ease,color .3s ease,border-color .3s ease;
 }
 
 .social-list a:hover{
-color:var(--gold);
+background:var(--gold);
+color:#111;
+border-color:var(--gold);
+}
+
+.social-list span{
+color:#888;
+border-color:#665638;
+cursor:default;
 }
 
 /* FOOTER */
@@ -382,7 +396,7 @@ gap:22px;
 }
 
 .social-list{
-gap:18px;
+gap:10px;
 }
 
 }
