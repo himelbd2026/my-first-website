@@ -123,6 +123,7 @@ color:#111;
 text-decoration:none;
 font-weight:bold;
 border-radius:3px;
+transition:.3s;
 }
 
 .btn:hover{background:#f0d69e}
@@ -263,8 +264,64 @@ font-size:13px;
 
 /* CONTACT SECTION */
 
-.contact{text-align:center}
-.contact p{color:#aaa}
+.contact{
+text-align:center;
+background:#090909;
+}
+
+.contact p{
+color:#aaa;
+}
+
+.contact-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.whatsapp-btn{
+background:transparent;
+color:var(--gold);
+border:1px solid var(--gold);
+}
+
+.whatsapp-btn:hover{
+background:var(--gold);
+color:#111;
+}
+
+.social-links{
+margin-top:55px;
+padding-top:30px;
+border-top:1px solid #29251e;
+}
+
+.social-links h3{
+color:var(--gold);
+margin-bottom:20px;
+font-size:22px;
+}
+
+.social-list{
+display:flex;
+justify-content:center;
+gap:28px;
+flex-wrap:wrap;
+}
+
+.social-list a{
+color:#ddd;
+text-decoration:none;
+font-size:14px;
+transition:.3s;
+}
+
+.social-list a:hover{
+color:var(--gold);
+}
+
+/* FOOTER */
 
 footer{
 padding:25px;
@@ -273,6 +330,8 @@ border-top:1px solid #29251e;
 color:#888;
 font-size:13px;
 }
+
+/* MOBILE RESPONSIVE */
 
 @media(max-width:750px){
 
@@ -316,11 +375,17 @@ grid-template-columns:1fr;
 gap:22px;
 }
 
+.social-list{
+gap:18px;
+}
+
 }
 </style>
 </head>
 
 <body>
+
+<!-- NAVIGATION -->
 
 <nav>
 <div class="brand">
@@ -336,6 +401,8 @@ gap:22px;
 <a href="#contact">Contact</a>
 </div>
 </nav>
+
+<!-- HERO SECTION -->
 
 <header class="hero" id="home">
 
@@ -484,7 +551,7 @@ Your browser does not support video playback.
 </div>
 
 </section>
- 
+
 <!-- CONTACT SECTION -->
 
 <section class="contact" id="contact">
@@ -497,6 +564,7 @@ Your browser does not support video playback.
 <p>Let's discuss your ideas and explore how we can work together.</p>
 
 <div class="contact-buttons">
+
 <a href="mailto:YOUR-EMAIL@example.com" class="btn">
 Email Me →
 </a>
@@ -504,9 +572,11 @@ Email Me →
 <a href="https://wa.me/8801XXXXXXXXX" class="btn whatsapp-btn" target="_blank" rel="noopener">
 WhatsApp →
 </a>
+
 </div>
 
 <div class="social-links">
+
 <h3>Follow Me</h3>
 
 <div class="social-list">
@@ -515,56 +585,12 @@ WhatsApp →
 <a href="YOUR-LINKEDIN-LINK" target="_blank" rel="noopener">LinkedIn</a>
 <a href="YOUR-YOUTUBE-LINK" target="_blank" rel="noopener">YouTube</a>
 </div>
+
 </div>
 
 </section>
 
-<footer>
-© 2026 Himel BD. All Rights Reserved.
-</footer>
-
-<style>
-.contact-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-.whatsapp-btn{
-background:transparent;
-color:#d6b878;
-border:1px solid #d6b878;
-}
-
-.social-links{
-margin-top:45px;
-}
-
-.social-links h3{
-color:#d6b878;
-margin-bottom:18px;
-font-size:22px;
-}
-
-.social-list{
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-}
-
-.social-list a{
-color:#ddd;
-text-decoration:none;
-font-size:14px;
-transition:.3s;
-}
-
-.social-list a:hover{
-color:#d6b878;
-}
-</style>
+<!-- FOOTER -->
 
 <footer>
 © 2026 Himel BD. All Rights Reserved.
